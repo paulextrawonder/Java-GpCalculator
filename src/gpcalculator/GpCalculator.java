@@ -3,6 +3,8 @@ package gpcalculator;
 
 import java.util.*;
 public class GpCalculator {
+    
+    //global variables declaration
     //**********************//
        static   int storeA=0;
        static   int storeB=0;
@@ -16,7 +18,7 @@ public class GpCalculator {
     public static void main(String[]args){
        Scanner input=new Scanner(System.in);
         Scanner in=new Scanner(System.in);
-        System.out.println(".....Gp Calculator.......");
+        System.out.println("..... Gp Calculator .......");
         
        System.out.println("Enter total units");
        
@@ -24,8 +26,10 @@ public class GpCalculator {
               
                    int TCunit = 0;
                    int temp=0;
+                   int count = 0; // initializes the count variable
          for(int i=1; i<=Tunits;  i++){
-             System.out.print("------ Course Code>>  ");
+             count = count + 1; // counts the numner of courses entered..
+             System.out.print("\n"+(count) +"------ Course Code>>  ");           
             String Ccode=in.nextLine();
             System.out.print("Course Unit>>  ");
             Cunit=input.nextInt();
@@ -56,7 +60,7 @@ public class GpCalculator {
             
             temp=temp + Cunit;
             i=temp;
-                
+                            
             }else{System.out.println("Error!!!\nEither Course Unit is <= 0 or Total-Course-Unit exceeded Total-Unit");
                 break; 
             }
